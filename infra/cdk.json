@@ -1,0 +1,4 @@
+{
+  "app": "node app.ts",
+  "output": "cdk.out"
+}

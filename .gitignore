@@ -1,7 +1,13 @@
-!jest.config.js
-*.d.ts
-node_modules
-
-# CDK asset staging directory
-.cdk.staging
-cdk.out
+node_modules/
+.pnpm-store/
+.turbo/
+dist/
+coverage/
+cdk.out/
+.cdk.staging/
+*.tsbuildinfo
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store

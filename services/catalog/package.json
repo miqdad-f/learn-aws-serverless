@@ -1,0 +1,18 @@
+{
+  "name": "@serverless/catalog",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild index.ts --bundle --platform=node --target=node24 --format=cjs --outfile=dist/index.cjs --sourcemap",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "catalog:",
+    "@aws-sdk/lib-dynamodb": "catalog:"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "catalog:"
+  }
+}

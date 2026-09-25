@@ -1,0 +1,18 @@
+{
+  "$schema": "https://turborepo.dev/schema.json",
+  "globalDependencies": [".nvmrc", "tsconfig.base.json", "vitest.config.ts"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "typecheck": {
+      "dependsOn": ["^typecheck"]
+    },
+    "test": {},
+    "@serverless/infra#build": {
+      "cache": false,
+      "passThroughEnv": ["AWS_*", "CDK_*"]
+    }
+  }
+}
